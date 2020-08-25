@@ -7,15 +7,10 @@ class Navbar extends Component {
   return (
     <div className="topnav">
       <a href="#logo">Logo</a>
-      <a href="#about">Home</a>
-      <Link to="/category ">Categories</Link>
+      <Link to="/">Home</Link>
+      <Link to="/category">Categories</Link>
       <a href="#favourites">Favourites</a>
-      <a href="#Myrecipes">Myrecipes</a>
-         <div className="search-container">
-            <input type="text" placeholder="Search.." name="search" />
-              
-
-        </div>
+      <Link to="/addrecipe">Myrecipes</Link>
     </div>
   );
 } 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './Fetch.css';
+
 
 
 class  Category extends React.Component{
@@ -30,27 +30,20 @@ class  Category extends React.Component{
               }      
               
               
-              recview = (e) => {
-
-                {this.state.item.map((value) => (
-                    <div className="card">
-                     <img src={value.strCategoryThumb} />
-                    <h4>{value.strCategory}</h4>
-                    
-                     </div>
-                   ))
-               }  
+              
                 
-            }
+            
         
           render()
+          
            { 
+             console.log("here",this.state.item)
             return (
                 <div className="content">
                   <h4>Categories</h4>
                      {this.state.item.map((value) => (
                      <div className="card">
-                      <img src={value.strCategoryThumb} />
+                      <img src={value.strCategoryThumb} alt="food"/>
                      <h4>{value.strCategory}</h4>
                      <button type="submit" onClick={this.recview}>View Details</button>
                       </div>

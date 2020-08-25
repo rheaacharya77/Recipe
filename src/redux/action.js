@@ -4,3 +4,10 @@ export const searchrecipe = (recipe) => {
       recipe: recipe
     };
   };
+
+  export const addrecipe = (rec) => ({
+    type: "ADD_RECIPE",
+    rec: rec
+
+})
+

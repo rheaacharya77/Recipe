@@ -1,0 +1,19 @@
+
+
+.contents{
+    background-color: lightgrey;
+    border: 15px solid blue;
+    padding: 50px;
+    margin-left: 150px;
+    margin-right:150px;
+    color:black;
+    margin-bottom: 50px;
+    
+    
+  }
+  .card{
+    margin: 20px;
+    color:white;
+    box-shadow:  0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    display: inline;
+}
