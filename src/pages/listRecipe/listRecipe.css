@@ -2,7 +2,7 @@
 
 .contents{
     background-color: lightgrey;
-    border: 15px solid blue;
+    border: 15px solid rgb(143, 138, 138);
     padding: 50px;
     margin-left: 150px;
     margin-right:150px;
@@ -11,9 +11,54 @@
     
     
   }
-  .card{
-    margin: 20px;
-    color:white;
-    box-shadow:  0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
-    display: inline;
+.cards{
+  margin: 20px;
+  color:white;
+  box-shadow:  0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+  /* height:500px; */
+}
+
+.contentss{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* border: 10px solid rgb(143, 138, 138);; */
+}
+.cat{
+margin-left: 95px;
+background-color: black;
+margin-bottom: 10px;
+}
+
+
+.column {
+float: left;
+width: 33.33%;
+padding: 10px;
+
+}
+
+
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+
+@media (max-width: 600px) {
+.column {
+  width: 100%;
+}
+}
+
+h2{
+  color: #000000;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Satisfy", cursive;
+    text-align: center;
+
 }

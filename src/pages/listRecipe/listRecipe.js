@@ -12,20 +12,27 @@ class Listrecipe extends React.Component{
                console.log("here",rec)
                return(
                    <div>
-                    <h4>Recipes</h4>
-
+                    <h1>Recipes</h1>
+                    <div className="content-main">
                      {rec.map( r =>
-
-                     <div className="contents">
-                        <h3> {r.name}</h3>
-                        <h2> {r.category}</h2>
-                         <h2>{r.ingredients}</h2>
-                         <h2>{r.instructions}</h2>
+                      <div className="card">
+                     <div className="card-body">
+                  
+                   {/* <div className="column">
+                   <div className="contentss">
+                     <div className ="cards"> */}
+                    
+                        <h2 class="card-title"> {r.name}</h2>
+                        <h2 class="card-title">Category: {r.category}</h2>
+                         <span class="card-author subtle">Ingredients:{r.ingredients}</span>
+                         <span class="card-description subtle">Instructions:{r.instructions}</span>
                      </div>
+                     </div>
+                    
                      
                      )}
-                         
-                    <Link to ='/addrecipe'><h1>Return to Addrecipe</h1> </Link>
+                         </div>
+                   
             </div>
                    )}    
        

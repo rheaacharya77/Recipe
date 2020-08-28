@@ -1,4 +1,4 @@
-input[type=text], select {
+input[type=text], textarea,select {
     width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -6,6 +6,7 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    font-family: serif
   }
   
   button {
@@ -38,9 +39,9 @@ input[type=text], select {
       margin-left: 50px;
   }
 
-  .btn{
+  .catt{
     width: 50%;
-    background-color: blueviolet;
+    background-color: black;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -48,3 +49,5 @@ input[type=text], select {
     border-radius: 4px;
     cursor: pointer; 
   }
+
+ 

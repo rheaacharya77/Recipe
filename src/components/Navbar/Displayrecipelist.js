@@ -1,28 +1,47 @@
 
 import React from "react";
 import './Recipesearch.css';
+import '../../contents/category.css';
 
 
 function Displayrecipelist(props) {
-  console.log(props.recipeDetails);
+
   const recipes = props.recipeDetails;
-  console.log("recipes",recipes)
+  
   return (
     
-   <div className="content">
+   <div className="row">
+      
+    
       {recipes.map((recipe) => {
         return (
+         
+          <div className="columns-search">
                
-               <div className="card">
-                 <img src={recipe.strMealThumb} alt="meal"></img>
-                  <h4>{recipe.strMeal}</h4>
-                  <h4>{recipe.strCategory}</h4>
-                  <h4>{recipe.strInstructions}</h4>
+               <div className="card-search">
+                 <img src={recipe.strMealThumb} className="card-media" alt="meal"></img>
+                  <h2 className="card-title">{recipe.strMeal}</h2>
+                  <span class="card-author subtle">Ingredients: {recipe.strIngredient1}<span>{recipe.strMeasure1}</span>
+                                        {recipe.strIngredient2}<span>{recipe.strMeasure2}</span>
+                                        {recipe.strIngredient3}<span>{recipe.strMeasure3}</span>
+                                        {recipe.strIngredient4}<span>{recipe.strMeasure4}</span>
+                                        {recipe.strIngredient5}<span>{recipe.strMeasure5}</span>
+                                        {recipe.strIngredient6}<span>{recipe.strMeasure6}</span>
+                                        {recipe.strIngredient7}<span>{recipe.strMeasure7}</span>
+                                        
+                        </span>
+                        <span class="card-description subtle">Instructions: {recipe.strInstructions}</span>  
+                 
                 </div>
+              </div>
+          
                 
         );
       })}
     </div>
+    
+    
+  
   );
 }
 

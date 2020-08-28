@@ -15,7 +15,7 @@ class  Fetch extends React.Component{
 
 
           componentDidMount() {
-          fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=cheesecake")
                 .then(response => {
                 console.log(response);
                 return response.json();
@@ -35,39 +35,40 @@ class  Fetch extends React.Component{
              
             return (
 
+              <div>
+                
+              <h2 class="card-title">Discover Latest Trending Recipes</h2>
+              
+              <div className="content-maindes">
                
-                <div className="content">
-                  <Banner />
-                  <h4>Featured Recipe</h4>
-                     {this.state.item.map((value) => (
-                     <div className="card">
-                     
-
-                       <img src={value.strMealThumb} alt="meal"></img>
-                       <h4>{value.strMeal}</h4>
-                        <h5>{value.strTags}</h5>
-                        <h5>Category: {value.strCategory}</h5>
-                        <h5>Ingredients: <ul> <li>{value.strIngredient1}<span>{value.strMeasure1}</span></li>
-                                        <li>{value.strIngredient2}<span>{value.strMeasure2}</span></li>
-                                        <li>{value.strIngredient3}<span>{value.strMeasure3}</span></li>
-                                        <li> {value.strIngredient4}<span>{value.strMeasure4}</span></li>
-                                        <li> {value.strIngredient5}<span>{value.strMeasure5}</span></li>
-                                        <li> {value.strIngredient6}<span>{value.strMeasure6}</span></li>
-                                        <li>{value.strIngredient7}<span>{value.strMeasure7}</span></li>
-                                        <li>{value.strIngredient8}<span>{value.strMeasure8}</span></li>
-                                        <li> {value.strIngredient9}<span>{value.strMeasure9}</span></li>
-                                        <li>{value.strIngredient10}<span>{value.strMeasure10}</span></li>
-                                        <li> {value.strIngredient11}<span>{value.strMeasure11}</span></li>
-                                        <li> {value.strIngredient12}<span>{value.strMeasure12}</span></li>
-                                        <li> {value.strIngredient13}<span>{value.strMeasure13}</span></li>
-                                         </ul>
-                        </h5>
-                        <h5>Instructions: {value.strInstructions}</h5>
-                        
-                      </div>
-                    ))
-                }  
-              </div>
+                 {this.state.item.map((value) => (
+                 <div className="card">
+                 <div className="card-body">
+                
+                <img src={value.strMealThumb} className="card-media " alt="food" />
+                  
+                 <h2 class="card-title"> {value.strMeal} </h2> 
+                 <span class="card-author subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
+                                    {value.strIngredient2}<span>{value.strMeasure2}</span>
+                                    {value.strIngredient3}<span>{value.strMeasure3}</span>
+                                     {value.strIngredient4}<span>{value.strMeasure4}</span>
+                                     {value.strIngredient5}<span>{value.strMeasure5}</span>
+                                   {value.strIngredient6}<span>{value.strMeasure6}</span>
+                                    {value.strIngredient7}<span>{value.strMeasure7}</span>
+                                     
+                   
+                    </span>
+                    
+                    
+                 </div>
+                 
+                
+                </div>
+                ))
+            }  
+            </div>
+          </div>
+               
             );
           
           }

@@ -11,3 +11,12 @@ export const searchrecipe = (recipe) => {
 
 })
 
+//  export const recipesdetail = (fetchall) => ({
+//    type: "FETCH_RECIPES",
+//    fetchall: fetchall
+//  })
+
+//  export const recipedetail = (fetchone) => ({
+//    type: "FETCH_RECIPE",
+//    fetchone: fetchone
+//  })
