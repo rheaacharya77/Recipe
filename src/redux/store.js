@@ -1,9 +1,10 @@
 import { createStore } from "redux";
-
+import {persistStore} from "redux-persist";
 import {composeWithDevTools} from "redux-devtools-extension";
 
 import myReducer from "./reducer";
 
-const store = createStore(myReducer, composeWithDevTools());
+export const store = createStore(myReducer, composeWithDevTools());
 
-export default store;
+export const persistor = persistStore(store);
+export default {store, persistor};

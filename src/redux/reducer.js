@@ -1,4 +1,5 @@
-
+import {persistReducer} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 const initialState = {
     recipes: "",
     rec:[]
@@ -6,7 +7,18 @@ const initialState = {
     // fetchone:[]
 
   };
+   const persistConfig = {
+     key: 'root',
+     storage : storage,
+     whitelist:[
+       'Listrecipes'
+     ]
+   };
 
+
+
+
+ 
   const myReducer = (state = initialState, action) => {
 
     console.log(action.recipe)
@@ -34,4 +46,5 @@ const initialState = {
         return state;
     }
   }
-  export default myReducer;
+  // export default myReducer;
+    export default persistReducer(persistConfig,myReducer);
