@@ -13,7 +13,7 @@ class Navbar extends Component {
       <li><Link to="/listrecipe">My Recipes</Link></li>
       <li><Link to="/addrecipe">Add Recipe</Link></li>
       <li><Link to="/category">Categories</Link></li>
-      <li><Link to="/" class="home">Home</Link></li>
+      <li><Link to="/" class="home">RECIPE</Link></li>
       
       
       
