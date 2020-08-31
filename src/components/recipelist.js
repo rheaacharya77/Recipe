@@ -1,12 +1,12 @@
 
 import React from "react";
 import './Recipesearch.css';
-import '../../contents/category.css';
+import '../contents/category/category.css';
 
 
-function Displayrecipelist(props) {
+function Recipelist(props) {
 
-  const recipes = props.recipeDetails;
+  const recipes = props.recipestack;
   
   return (
     
@@ -21,7 +21,7 @@ function Displayrecipelist(props) {
                <div className="card-search">
                  <img src={recipe.strMealThumb} className="card-media" alt="meal"></img>
                   <h2 className="card-title">{recipe.strMeal}</h2>
-                  <span class="card-author subtle">Ingredients: {recipe.strIngredient1}<span>{recipe.strMeasure1}</span>
+                  <span class="card-first-row subtle">Ingredients: {recipe.strIngredient1}<span>{recipe.strMeasure1}</span>
                                         {recipe.strIngredient2}<span>{recipe.strMeasure2}</span>
                                         {recipe.strIngredient3}<span>{recipe.strMeasure3}</span>
                                         {recipe.strIngredient4}<span>{recipe.strMeasure4}</span>
@@ -45,4 +45,4 @@ function Displayrecipelist(props) {
   );
 }
 
-export default Displayrecipelist;
+export default Recipelist;

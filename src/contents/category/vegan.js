@@ -45,7 +45,7 @@ class  Vegan extends React.Component{
                     <img src={value.strMealThumb} className="card-media " alt="food" />
                       
                      <h2 class="card-title"> {value.strMeal} </h2> 
-                     <span class="card-author subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
+                     <span class="card-first-row subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
                                         {value.strIngredient2}<span>{value.strMeasure2}</span>
                                         {value.strIngredient3}<span>{value.strMeasure3}</span>
                                          {value.strIngredient4}<span>{value.strMeasure4}</span>

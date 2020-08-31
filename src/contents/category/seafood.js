@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './category.css';
 
-class  Dinner extends React.Component{
+class  Seafood extends React.Component{
 
     
         constructor(props) {
@@ -16,7 +16,7 @@ class  Dinner extends React.Component{
 
           componentDidMount() {
           
-          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=tandoori")
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=seafood")
                 .then(response => {
                 console.log(response);
                 return response.json();
@@ -45,19 +45,18 @@ class  Dinner extends React.Component{
             return (
               <div>
                 
-                  <h1>Dinner</h1>
-                 
+                  <h1>Seafood</h1>
                   
                   <div className="content-mainsea">
                    
                      {this.state.item.map((value) => (
                      <div className="card">
-                     
+                    
                     
                     <img src={value.strMealThumb} className="card-media " alt="food" />
                       
                      <h2 class="card-title"> {value.strMeal} </h2> 
-                     <span class="card-author subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
+                     <span class="card-first-row subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
                                         {value.strIngredient2}<span>{value.strMeasure2}</span>
                                         {value.strIngredient3}<span>{value.strMeasure3}</span>
                                          {value.strIngredient4}<span>{value.strMeasure4}</span>
@@ -76,13 +75,12 @@ class  Dinner extends React.Component{
                     ))
                 }  
                 </div>
-                </div>
+              </div>
+             
               
-             
-             
              
             );
           }
    }
  
-export default Dinner;
+export default Seafood;

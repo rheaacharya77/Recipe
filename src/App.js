@@ -4,19 +4,18 @@ import { Provider } from "react-redux";
 import{PersistGate} from 'redux-persist/integration/react';
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 
-import Vegan from "./contents/vegan";
-import Banner from "./contents/Banner";
-import Dinner from "./contents/dinner";
-import Seafood from "./contents/seafood";
-import Dessert from "./contents/dessert";
-import Category from "./contents/Category";
-import Fetch from "./contents/RecipeFetch";
-import Vegetarian from "./contents/vegetarian";
+import Vegan from "./contents/category/vegan";
+import Banner from "./components/banner/Banner";
+import Dinner from "./contents/category/dinner";
 import Navbar from "./components/Navbar/Navbar";
-import Categorys from "./contents/Categorylist";
-import Recipesearch from "./contents/Recipesearch";
-import Addrecipe from "./pages/addRecipe/addRecipe";
-import Listrecipe from "./pages/listRecipe/listRecipe";
+import Seafood from "./contents/category/seafood";
+import Dessert from "./contents/category/dessert";
+import Category from "./contents/category/Category";
+import breakfast from "./contents/category/breakfast";
+import Addrecipe from "./contents/addRecipe/addRecipe";
+import Vegetarian from "./contents/category/vegetarian";
+import Listrecipe from "./contents/listRecipe/listRecipe";
+import Recipesearch from "./contents/Recipesearch/Recipesearch";
 
 
 
@@ -33,13 +32,12 @@ function App() {
        <PersistGate persistor={persistor}>
         <Route path="/search" component={Recipesearch} />
         <Route path="/category" component= {Category} />
-        <Route path="/categorys" component= {Categorys} />
+        <Route path="/breakfast" component= {breakfast} />
         <Route path="/dinner" component= {Dinner} />
         <Route path="/dessert" component= {Dessert} />
         <Route path="/vegetarian" component= {Vegetarian} />
         <Route path="/seafood" component= {Seafood} />
         <Route path="/vegan" component= {Vegan} />
-        <Route path="/random" component={Fetch} />
          <Route exact path="/" component={Banner} /> 
          <Route path="/addrecipe" component={Addrecipe} />
          <Route path="/listrecipe" component={Listrecipe} />

@@ -24,7 +24,7 @@ class Listrecipe extends React.Component{
                     
                         <h2 class="card-title"> {r.name}</h2>
                         <h2 class="card-title">Category: {r.category}</h2>
-                         <span class="card-author subtle">Ingredients:{r.ingredients}</span>
+                         <span class="card-first-row subtle">Ingredients:{r.ingredients}</span>
                          <span class="card-description subtle">Instructions:{r.instructions}</span>
                      </div>
                      </div>

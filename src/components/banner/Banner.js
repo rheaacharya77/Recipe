@@ -1,9 +1,10 @@
 import React from 'react';
 import './Banner.css';
-import picture from '../img/banner.png';
-import RecipeFetch from './RecipeFetch';
-import Recipesearch from './Recipesearch';
-import './category.css';
+import '../../contents/category/category.css';
+
+import picture from '../../img/banner.png';
+import Recipesearch from '../../contents/Recipesearch/Recipesearch';
+
 
 
 
@@ -15,8 +16,6 @@ return (
 </div>
 <h2 class="card-title">Discover Latest Trending Recipes</h2>
 <Recipesearch />
-
-
 </div>
 )
 }

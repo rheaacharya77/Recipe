@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import './category.css';
 
-class  Dessert extends React.Component{
+class  Vegetarian extends React.Component{
 
     
         constructor(props) {
@@ -16,7 +16,7 @@ class  Dessert extends React.Component{
 
           componentDidMount() {
           
-          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=cheesecake")
+          fetch("https://www.themealdb.com/api/json/v1/1/search.php?s=vegetarian")
                 .then(response => {
                 console.log(response);
                 return response.json();
@@ -43,19 +43,20 @@ class  Dessert extends React.Component{
             
              console.log("here",this.state.item)
             return (
-              <div>
+              
+                <div>
                 
-                  <h1>Dessert</h1>
                   
-                  <div className="content-maindes">
+                  
+                  <div className="content-main">
                    
                      {this.state.item.map((value) => (
                      <div className="card">
-                     <div className="card-body">
+                     
                     
                     <img src={value.strMealThumb} className="card-media " alt="food" />
                       
-                     <h2 class="card-title"> {value.strMeal} </h2> 
+                     <h2 class="card-first-row"> {value.strMeal} </h2> 
                      <span class="card-author subtle">Ingredients: {value.strIngredient1}<span>{value.strMeasure1}</span>
                                         {value.strIngredient2}<span>{value.strMeasure2}</span>
                                         {value.strIngredient3}<span>{value.strMeasure3}</span>
@@ -71,15 +72,20 @@ class  Dessert extends React.Component{
                      </div>
                      
                     
-                    </div>
+                    
                     ))
                 }  
                 </div>
               </div>
              
+                
+                  
+           
+                    
+            
              
             );
           }
    }
  
-export default Dessert;
+export default Vegetarian;

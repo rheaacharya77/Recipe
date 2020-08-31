@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { searchrecipe } from "../redux/action";
-import Displayrecipelist from "../components/Navbar/Displayrecipelist";
-import './Fetch.css';
+
+import '../Fetch.css';
+
+import { searchrecipe } from "../../redux/action";
+
+import Recipelist from "../../components/recipelist";
+
+
 
 
 class Recipesearch extends Component {
@@ -10,7 +15,7 @@ class Recipesearch extends Component {
     super(props);
 
     this.state = {
-      recipeDetails: [],
+      recipestack: [],
       text: "Search for a recipe",
       
       
@@ -33,16 +38,16 @@ class Recipesearch extends Component {
       
     })
 
-      .then(recipeDetails => {
-        console.log('data',{ recipeDetails});
+      .then(recipestack => {
+       
 
         this.setState({
-          recipeDetails: recipeDetails.meals,
+          recipestack: recipestack.meals,
           text:""
           
         })
 
-        this.props.searchrecipe(recipeDetails);
+        this.props.searchrecipe(recipestack);
       })
   }
 
@@ -59,7 +64,7 @@ class Recipesearch extends Component {
          </form>
         <div>
           
-            <Displayrecipelist recipeDetails={this.state.recipeDetails} />
+            <Recipelist recipestack={this.state.recipestack} />
                      
         </div>
       </div>

@@ -7,9 +7,6 @@ h1{
 }
 .content-main{
   display: flex;
-  /* justify-content: center;
-  flex-direction: column;
-  align-items: center; */
   float: left;
   padding: 10px;
   margin-left: 50px;
@@ -53,11 +50,7 @@ h1{
   display:flex;
   padding:10px;
 }
-.cardbreak {
-  float: left;
-  padding: 10px;
-  margin-left: 50px;
-}
+
 
 .content-mainsea{
   display: flex;
@@ -106,13 +99,11 @@ h1{
   width: 310px;
 }
 
-.card-number {
-  margin-top: 15px;
-}
 
 
 
-.card-author {
+
+.card-first-row {
   display: block;
   font-size: 12px;
   letter-spacing: .5px;

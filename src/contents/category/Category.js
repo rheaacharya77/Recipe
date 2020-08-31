@@ -1,23 +1,20 @@
 import React from 'react';
 import './category.css';
-import picture from '../img/breakfast.png';
-import dinner from '../img/dinner.png';
-import vegetarian from '../img/vegetarian.png';
-import dessert from '../img/dessert.png';
-import seafood from '../img/seafood.png';
-import vegan from '../img/vegan.png';
+import picture from '../../img/breakfast.png';
+import dinner from '../../img/dinner.png';
+import vegetarian from '../../img/vegetarian.png';
+import dessert from '../../img/dessert.png';
+import seafood from '../../img/seafood.png';
+import vegan from '../../img/vegan.png';
 import {Link} from 'react-router-dom';
 
-const CATEGORIES = [{
+const CATEGORIES = [
+{
   imageSrc: picture,
-  route:"/categorys",
+  route:"/breakfast",
   title:"Breakfast"
 },
-{
-imageSrc: dinner,
-route:"/dinner",
-title:"Dinner"
-},
+
 {
 imageSrc: dessert,
 route:"/dessert",
@@ -28,6 +25,11 @@ imageSrc: vegetarian,
 route:"/vegetarian",
 title:"Vegetarian"
 },
+{
+  imageSrc: dinner,
+  route:"/dinner",
+  title:"Dinner"
+  },
 {
   imageSrc: seafood,
   route:"/seafood",
